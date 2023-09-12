@@ -131,6 +131,17 @@ img{
     background-color:var(--light-colorr);
     color:#fff;
 }
+.btn-primary a,
+.bg-primary a,
+.btn-dark a,
+.bg-dark a,
+.btn-secondary a,
+.bg-secondary a,
+.btn-light a,
+.bg-light a{
+    color:#fff;
+}
+
 /* Text sizes */
 .lead{
     font-size:20px;
@@ -196,4 +207,25 @@ img{
 /* Cloud */
 .cloud .grid{
     grid-template-columns:4fr 3fr;
+}
+/* languages */
+.languages .card{
+    margin:18px 10px 40px;
+    text-align: center;
+    transition:transform 0.2s ease-in;
+}
+.languages .card h4{
+    font-size:20px;
+    margin:10px 0px;
+} 
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+.languages .flex{
+   flex-wrap:wrap;
+   justify-content: flex-start;
+}
+/* Footer */
+.footer .social a {
+   margin:0 10px;
 }
