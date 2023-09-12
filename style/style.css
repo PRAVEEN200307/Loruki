@@ -7,6 +7,7 @@
 
 :root{
    --primary-color:#047aed;
+   --dark-blue:#10108e;
 }
 
 body{
@@ -38,19 +39,8 @@ img{
     color:#fff;
     height:70px;
 }
-/* utilities */
-.container{
-    max-width:1100px;
-    margin:0 auto;
-    overflow: auto;
-    padding:0px 40px;
-}
-.flex{
-   display: flex; 
-   justify-content:space-between;
-   align-items: center;
-   height:100%;
-}
+
+
 .navbar ul{
    display: flex;
 }
@@ -69,6 +59,7 @@ img{
     background-color:var(--primary-color);
     /* color: #8b8787; */
     color:#fff;
+    position: relative;
 }
 .showcase h1{
     font-size:40px;
@@ -80,24 +71,6 @@ img{
    grid-template-columns:55% 45%;
    gap:30px;
    overflow: visible;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    height:100%;
-    align-items: center;
-    gap:20px;
-    /* note */
-    align-items: center;
-}
-.card{
-    background-color: #fff;
-    border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.2);
-    padding:20px;
-    margin:10px;
-    color:#333;
 }
 .showcase-form{
     position: relative;
@@ -122,4 +95,57 @@ img{
 }
 .showcase-form input:focus{
     outline:none;
+}
+
+.btn-outline{
+  background-color:transparent;
+  border:1px solid #fff;
+}
+.btn:hover{
+    transform:scale(0.98);
+}
+.showcase::before,
+.showcase::after{
+   content:'';
+   position: absolute;
+   left:0;
+   right:0;
+   height:100px;
+   bottom:-70px;
+   background-color:#ffff;
+   transform:skewY(-3deg);
+   /* crome */
+   -webkit-transform:skewY(-3deg);
+   /* safari */
+   -moz-transform:skewY(-3deg);
+   /* internal exflore */
+   -ms-transform:skewY(-3deg);
+}
+/* stats */
+.stats{
+    padding-top:100px;
+}
+.text-center{
+    text-align: center;  
+}
+.stats-heading{
+    max-width:500px;
+    margin:auto;
+}
+.stats .grid h3{
+    font-size:35px;
+}
+.stats .grid p{
+   font-size:20px;
+   font-weight:bold;
+   color:var(--dark-blue);
+}
+/* Cli */
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.cli .grid>*:first-child{
+    grid-column:1/ span 2;
+    grid-row: 1/ span 2;
 }
