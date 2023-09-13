@@ -223,7 +223,7 @@ img{
 }
 .languages .flex{
    flex-wrap:wrap;
-   justify-content: flex-start;
+   justify-content:center;
 }
 /* Footer */
 .footer .social a {
@@ -271,5 +271,8 @@ img{
    .navbar ul{
        padding:10px;
        background-color:rgba(0,0,0,0.1);
+   }
+   .showcase-form{
+      width:100%;
    }
 }
